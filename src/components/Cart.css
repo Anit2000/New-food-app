@@ -1,0 +1,25 @@
+.cart {
+  min-width: 50vw;
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 30%);
+  border-radius: 16px;
+  padding: 2%;
+  min-height: 400px;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.cart-header button svg {
+  width: 22px;
+}

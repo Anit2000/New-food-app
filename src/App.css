@@ -1,12 +1,64 @@
 .App {
   text-align: center;
+  max-width: 82vw;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+svg {
+  width: 18px;
+  height: auto;
+}
+.landing-banner {
+  position: relative;
+  display: flex;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landing-banner::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 20%);
+  border-radius: 60px;
+}
+.banner-text h2 {
+  font-size: 40px;
+  color: #fff;
+}
+.banner-text a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #fcc826;
+  font-size: 20px;
+  padding: 2% 5%;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.landing-banner {
+  border-radius: 62px;
+}
+.landing-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 62px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

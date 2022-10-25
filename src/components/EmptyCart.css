@@ -1,0 +1,16 @@
+.empty-cart button {
+  background: none;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 10%);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease-in;
+}
+.empty-cart button:hover {
+  background-color: #fcc826;
+  color: #fff;
+  font-weight: 600;
+}

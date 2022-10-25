@@ -1,0 +1,31 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
+  padding: 4% 10%;
+  border-radius: 16px;
+  justify-content: space-between;
+  position: relative;
+}
+.remove-btn {
+  position: absolute;
+  right: 2%;
+  top: 10%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.remove-btn svg {
+  width: 22px;
+}
+.item-image img {
+  max-height: 100px;
+  width: auto;
+  border-radius: 10px;
+}
+.item-left {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,29 @@
+.quantity-wrap {
+  display: flex;
+}
+.quantity-wrap input {
+  max-width: 40px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+}
+.quantity-wrap button {
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  background-color: #fcc826;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.quantity-wrap input::-webkit-outer-spin-button,
+.quantity-wrap input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-wrap input[type="number"] {
+  -moz-appearance: textfield;
+}

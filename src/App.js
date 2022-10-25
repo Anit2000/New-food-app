@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Header from "./components/Header";
+import ProductContainer from "./components/PoductContainer";
+import Banner from "./images/Banner/Banner.jpg";
+import store from "./store";
+import { Provider, useSelector } from "react-redux";
+import Cart from "./components/Cart";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <Cart />
+        <div className="landing-banner">
+          <img src={Banner} />
+          <div class="banner-text">
+            <h2>Get food deliverd</h2>
+            <a href="">Shop now</a>
+          </div>
+        </div>
+        <ProductContainer />
+      </div>
+    </Provider>
   );
 }
 

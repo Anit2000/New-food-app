@@ -1,0 +1,25 @@
+.productNav {
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 0px;
+  padding: 0% 2%;
+}
+.productNav button {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 20%);
+  border: none;
+  font-size: 18px;
+  padding: 0px 20px;
+  aspect-ratio: 3/1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background ease-in-out 0.3s;
+}
+.productNav button.active {
+  color: #fff;
+  background-color: #fcc826;
+}
+.productNav button:hover {
+  background-color: #fcc826;
+  color: #fff;
+}
