@@ -1,8 +1,9 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { displayCart } from "../features/cart";
 import { Cart } from "../icon/Icons";
 import "./Header.css";
 const Header = () => {
+  const { count } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const toggleDisplay = () => {
     dispatch(displayCart());
@@ -12,7 +13,7 @@ const Header = () => {
       <div className="logo">Logo</div>
       <span className="cart-icon" onClick={toggleDisplay}>
         <Cart />
-        <span className="count">0</span>
+        <span className="count">{count}</span>
       </span>
     </header>
   );

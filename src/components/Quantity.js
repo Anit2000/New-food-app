@@ -14,6 +14,7 @@ const Quantity = (props) => {
       }
     });
   };
+  if (props.updateQuantity) props.updateQuantity(count);
   return (
     <div className="quantity-wrap">
       <button onClick={decrement}>-</button>

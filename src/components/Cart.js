@@ -4,6 +4,7 @@ import { displayCart } from "../features/cart";
 import EmptyCart from "./EmptyCart";
 import CartItem from "./CartItem";
 import CartFooter from "./CartFooter";
+import { useEffect } from "react";
 import "./Cart.css";
 const Cart = () => {
   const { cartItem, amount, count, display } = useSelector(

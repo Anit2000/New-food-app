@@ -22,7 +22,27 @@ const cartSlice = createSlice({
     displayCart: (state) => {
       state.display = !state.display;
     },
+    addToCart: (state, action) => {
+      let cartItem = state.cartItem.find(
+        (item) => item.name == action.payload.name
+      );
+      if (cartItem) {
+        cartItem.amount += action.payload.amount;
+      } else {
+        state.cartItem = [...state.cartItem, action.payload];
+      }
+    },
+    calcTotal: (state) => {
+      let total = 0;
+      let count = 0;
+      state.cartItem.forEach(function (el, ind) {
+        total += Number(el.price) * el.amount;
+        count += el.amount;
+      });
+      state.count = count;
+      state.amount = total;
+    },
   },
 });
 export default cartSlice;
-export const { displayCart } = cartSlice.actions;
+export const { displayCart, addToCart } = cartSlice.actions;
